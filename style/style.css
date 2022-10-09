@@ -20,6 +20,7 @@ ul{
 .body{
     font-family: "Roboto", sans-serif;
     font-weight: 700;
+    
 }
 .container{
     width: 1200px;
@@ -64,6 +65,7 @@ header .container{
     margin-right: 50px;
 }
 .link{
+    position: relative;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.1;
@@ -76,19 +78,19 @@ header .container{
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.studio-link::after{
+.current:after{
     content: "";
     position: absolute;
     display: block;
-    width: 48px;
+    width: 100%;
     height: 4px;
     background-color: var(--accent-color);
-    margin-top: 28px;
+    bottom: -1px;
     border-radius: 2px;
 }
 .studio-link{
     color: var(--accent-color);
-}
+    }
 .portfolio-link,
 .contacts-link{
     color: var(--praymory-text-color);
@@ -149,6 +151,9 @@ header .container{
     max-width: 1600px;
     height: 600px;
     background-position: center;
+    background-size: contain;
+    margin-right: auto;
+    margin-left: auto;
 }
 .hero-title{
     color: var(--secondary-text-color);
@@ -249,53 +254,29 @@ header .container{
 }
 
 img{
-    display: block;
-}
-.work-details{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.1;
-    text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--secondary-text-color);
-    position: absolute;
-    width: 370px;
-    height: 70px;
-    background: rgba(47, 48, 58, 0.8);
-
+    display: block; 
 }
 .work-wrap-details {
     position: relative;
 }
-.project-wrap-details img{
-    display: block;
-}
-/*position: absolute;
-top: 0;
-left: 0;
-height: 100%;
-padding: 63px 24px;
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 1.6;
-letter-spacing: 0.03em;
-color: var(--secondary-text-color);
-background-color: rgba(33, 150, 243, 0.9);
-transform: translateY(100%);
-transition: transform 250ms;
-}
+.work-details{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
 
-.project-wrap-details {
-    position: relative;
-    overflow: hidden;
 }
-
-.project-wrap-details img {
-    display: block;
-}*/
 
 /* Наша команда */
 .team{
@@ -658,6 +639,8 @@ img {
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms linear, visibility 250ms linear;
 }
 .modal{
     width: 528px;
@@ -667,21 +650,29 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     background: var(--secondary-text-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 .close-button{
     position: absolute;
-    right: 6px;
-    top: 6px;
+    right: 8px;
+    top: 8px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
     fill: #000000;
+    background-color: var(--secondary-text-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
-/*.is-hidden{
+.is-hidden{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+.no-scroll{
+    overflow: hidden;
 }
 
  
