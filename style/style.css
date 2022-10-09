@@ -149,10 +149,10 @@ header .container{
     padding-top: 200px; 
     padding-bottom: 200px;
     max-width: 1600px;
-    height: 600px;
-    background-position: center;
-    background-size: contain;
-    
+    background-position: 100%;
+    background-size: cover;
+    margin-right: auto;
+    margin-left: auto;
 }
 .hero-title{
     color: var(--secondary-text-color);
