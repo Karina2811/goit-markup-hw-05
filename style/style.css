@@ -152,8 +152,7 @@ header .container{
     height: 600px;
     background-position: center;
     background-size: contain;
-    margin-right: auto;
-    margin-left: auto;
+    
 }
 .hero-title{
     color: var(--secondary-text-color);
